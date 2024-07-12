@@ -1,16 +1,23 @@
+# username = 'cherry__keem'
+
 import random
-
-import instaloader
-import time
 import datetime
+import time
+import instaloader
 
-
+# Создаем объект Instaloader
 il = instaloader.Instaloader()
+
+# Указываем имя пользователя Instagram
 username = 'bakirov.s'
 
+# Загружаем профиль
 profile = instaloader.Profile.from_username(il.context, username=username)
+
+# Получаем все посты пользователя
 posts = profile.get_posts()
 
+# Информация о профиле
 print(f'[+] Profile info: {username}\n{profile.biography}'
       f'\nPosts count: {profile.mediacount}'
       f'\nFollowers: {profile.followers}\n\n'
